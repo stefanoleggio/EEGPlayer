@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EEGPlayer</class>
+ <widget class="QMainWindow" name="EEGPlayer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>564</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>EEGPlayer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinAndMaxSize</enum>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="btn_startpause">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Start</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="lbl_amplitude">
+        <property name="maximumSize">
+         <size>
+          <width>208</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Amplitude</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="cmb_ampl">
+        <property name="maximumSize">
+         <size>
+          <width>208</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>1uV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2,5uV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5uV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>10uV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>25uV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>50uV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>100uV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>250uV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>500uV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1mV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2.5mV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5mV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>10mV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>25mV</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>50mV</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lbl_twindow">
+        <property name="maximumSize">
+         <size>
+          <width>208</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Time Window</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="cmb_time">
+        <property name="maximumSize">
+         <size>
+          <width>208</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>1s</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2s</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5s</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>10s</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lbl_channels">
+        <property name="maximumSize">
+         <size>
+          <width>208</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Active Channels</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="channels_scroll">
+        <property name="maximumSize">
+         <size>
+          <width>208</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="channels_scrollArea_content">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>206</width>
+           <height>312</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QVBoxLayout" name="channels_layout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <widget class="QScrollArea" name="chart_scrollArea">
+      <property name="minimumSize">
+       <size>
+        <width>500</width>
+        <height>500</height>
+       </size>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>498</width>
+         <height>498</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QVBoxLayout" name="chart_layout"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
